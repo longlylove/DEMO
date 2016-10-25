@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+  <head>
+    <title>xUnit.net Test Results</title>
+    <style type="text/css">
+          body { font-family: Calibri, Verdana, Arial, sans-serif; background-color: White; color: Black; }
+          h2,h3,h4,h5 { margin: 0; padding: 0; }
+          h3 { font-weight: normal; }
+          h4 { margin: 0.5em 0; }
+          h5 { font-weight: normal; font-style: italic; margin-bottom: 0.75em; }
+          h6 { font-size: 0.9em; font-weight: bold; margin: 0.5em 0 0 0.75em; padding: 0; }
+          pre,table { font-family: Consolas; font-size: 0.8em; margin: 0 0 0 1em; padding: 0; }
+          table { padding-bottom: 0.25em; }
+          th { padding: 0 0.5em; border-right: 1px solid #bbb; text-align: left; }
+          td { padding-left: 0.5em; }
+          .divided { border-top: solid 1px #f0f5fa; padding-top: 0.5em; }
+          .row, .altrow { padding: 0.1em 0.3em; }
+          .row { background-color: #f0f5fa; }
+          .altrow { background-color: #e1ebf4; }
+          .success, .failure, .skipped { font-family: Arial Unicode MS; font-weight: normal; float: left; width: 1em; display: block; }
+          .success { color: #0c0; }
+          .failure { color: #c00; }
+          .skipped { color: #cc0; }
+          .timing { float: right; }
+          .indent { margin: 0.25em 0 0.5em 2em; }
+          .clickable { cursor: pointer; }
+          .testcount { font-size: 85%; }
+        </style>
+    <script language="javascript">
+          function ToggleClass(id) {
+            var elem = document.getElementById(id);
+            if (elem.style.display == "none") {
+              elem.style.display = "block";
+            }
+            else {
+              elem.style.display = "none";
+            }
+          }
+        </script>
+  </head>
+  <body>
+    <h3 class="divided">
+      <b>Assemblies Run</b>
+    </h3>
+    <div>C:\Dev\Test\Test.Framework\Cin7Test\bin\Debug\Cin7Test.DLL</div>
+    <h3 class="divided">
+      <b>Summary</b>
+    </h3>
+    <div>
+          Tests run: <a href="#all"><b>4</b></a>  
+          
+            Failures: <a href="#failures"><b>2</b></a>,
+          
+          Run time: <b>58.503s</b></div>
+    <br />
+    <h2>
+      <a id="failures" />Failed tests
+          </h2>
+    <div class="row">
+      <span class="timing">14.6153749s
+        </span>
+      <span class="failure">✘</span>
+       Create a Blue Pants sale<br clear="all" /><pre>Discount Price or Total Price was incorrect!\r\nExpected: True\r\nActual:   False</pre><pre>   at Cin7Test.StepDefinitions.CreateSalesTestSteps.ThenICanSeeTheBlue_PantsSalesRecordsOnTheSalesPage() in c:\Dev\Test\Test.Framework\Cin7Test\StepDefinitions\CreateSalesTestSteps.cs:line 47
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at Cin7Test.Features.CreateSalesTestFeature.ScenarioCleanup() in c:\Dev\Test\Test.Framework\Cin7Test\Features\CreateSalesTest.feature.cs:line 0
+   at Cin7Test.Features.CreateSalesTestFeature.CreateABluePantsSale() in c:\Dev\Test\Test.Framework\Cin7Test\Features\CreateSalesTest.feature:line 11</pre><h6>Traits:</h6><table cellspacing="0" cellpadding="0"><tr><th>FeatureTitle</th><td>CreateSalesTest</td></tr><tr><th>Description</th><td>Create a Blue Pants sale</td></tr><tr><th>Category</th><td>runThis</td></tr></table></div>
+    <div class="altrow">
+      <span class="timing">13.553771s
+        </span>
+      <span class="failure">✘</span>
+       Create a Red Pants sale<br clear="all" /><pre>Discount Price or Total Price was incorrect!\r\nExpected: True\r\nActual:   False</pre><pre>   at Cin7Test.StepDefinitions.CreateSalesTestSteps.ThenICanSeeTheRed_PantsSalesRecordsOnTheSalesPage() in c:\Dev\Test\Test.Framework\Cin7Test\StepDefinitions\CreateSalesTestSteps.cs:line 68
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at Cin7Test.Features.CreateSalesTestFeature.ScenarioCleanup() in c:\Dev\Test\Test.Framework\Cin7Test\Features\CreateSalesTest.feature.cs:line 0
+   at Cin7Test.Features.CreateSalesTestFeature.CreateARedPantsSale() in c:\Dev\Test\Test.Framework\Cin7Test\Features\CreateSalesTest.feature:line 21</pre><h6>Traits:</h6><table cellspacing="0" cellpadding="0"><tr><th>FeatureTitle</th><td>CreateSalesTest</td></tr><tr><th>Description</th><td>Create a Red Pants sale</td></tr><tr><th>Category</th><td>runThis</td></tr></table></div>
+    <br />
+    <h2>
+      <a id="all" />All tests
+        </h2>
+    <h5>Click test class name to expand/collapse test details</h5>
+    <h3>
+      <span class="timing">55.146s
+            </span>
+      <span class="clickable" onclick="ToggleClass('classID0EY')" ondblclick="ToggleClass('classID0EY')">
+        <span class="failure">✘</span>
+               Cin7Test.Features.CreateSalesTestFeature
+               <span class="testcount">
+                (4 tests)
+              </span></span>
+      <br clear="all" />
+    </h3>
+    <div class="indent" id="classID0EY">
+      <div class="row">
+        <span class="timing">14.6153749s
+        </span>
+        <span class="failure">✘</span>
+       Create a Blue Pants sale<br clear="all" /><pre>Discount Price or Total Price was incorrect!\r\nExpected: True\r\nActual:   False</pre><pre>   at Cin7Test.StepDefinitions.CreateSalesTestSteps.ThenICanSeeTheBlue_PantsSalesRecordsOnTheSalesPage() in c:\Dev\Test\Test.Framework\Cin7Test\StepDefinitions\CreateSalesTestSteps.cs:line 47
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at Cin7Test.Features.CreateSalesTestFeature.ScenarioCleanup() in c:\Dev\Test\Test.Framework\Cin7Test\Features\CreateSalesTest.feature.cs:line 0
+   at Cin7Test.Features.CreateSalesTestFeature.CreateABluePantsSale() in c:\Dev\Test\Test.Framework\Cin7Test\Features\CreateSalesTest.feature:line 11</pre><h6>Traits:</h6><table cellspacing="0" cellpadding="0"><tr><th>FeatureTitle</th><td>CreateSalesTest</td></tr><tr><th>Description</th><td>Create a Blue Pants sale</td></tr><tr><th>Category</th><td>runThis</td></tr></table></div>
+      <div class="altrow">
+        <span class="timing">13.5152714s
+        </span>
+        <span class="success">✔</span>
+       Create a Green Pants sale<br clear="all" /><h6>Traits:</h6><table cellspacing="0" cellpadding="0"><tr><th>Description</th><td>Create a Green Pants sale</td></tr><tr><th>FeatureTitle</th><td>CreateSalesTest</td></tr><tr><th>Category</th><td>runThis</td></tr></table></div>
+      <div class="row">
+        <span class="timing">13.4617387s
+        </span>
+        <span class="success">✔</span>
+       Create a Grey Pants sale<br clear="all" /><h6>Traits:</h6><table cellspacing="0" cellpadding="0"><tr><th>Description</th><td>Create a Grey Pants sale</td></tr><tr><th>FeatureTitle</th><td>CreateSalesTest</td></tr><tr><th>Category</th><td>runThis</td></tr></table></div>
+      <div class="altrow">
+        <span class="timing">13.553771s
+        </span>
+        <span class="failure">✘</span>
+       Create a Red Pants sale<br clear="all" /><pre>Discount Price or Total Price was incorrect!\r\nExpected: True\r\nActual:   False</pre><pre>   at Cin7Test.StepDefinitions.CreateSalesTestSteps.ThenICanSeeTheRed_PantsSalesRecordsOnTheSalesPage() in c:\Dev\Test\Test.Framework\Cin7Test\StepDefinitions\CreateSalesTestSteps.cs:line 68
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at Cin7Test.Features.CreateSalesTestFeature.ScenarioCleanup() in c:\Dev\Test\Test.Framework\Cin7Test\Features\CreateSalesTest.feature.cs:line 0
+   at Cin7Test.Features.CreateSalesTestFeature.CreateARedPantsSale() in c:\Dev\Test\Test.Framework\Cin7Test\Features\CreateSalesTest.feature:line 21</pre><h6>Traits:</h6><table cellspacing="0" cellpadding="0"><tr><th>FeatureTitle</th><td>CreateSalesTest</td></tr><tr><th>Description</th><td>Create a Red Pants sale</td></tr><tr><th>Category</th><td>runThis</td></tr></table></div>
+    </div>
+  </body>
+</html>
