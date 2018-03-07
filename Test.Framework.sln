@@ -9,15 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{06404423-3C4B-4A3B-BCD7-A2E0F45380B6}"
 	ProjectSection(SolutionItems) = preProject
-		build-test.ps1 = build-test.ps1
+		Build\build-test.ps1 = Build\build-test.ps1
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cin7Test", "Cin7Test\Cin7Test.csproj", "{A35B3732-1509-4576-A86A-AE158BE2399E}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nuget", "Nuget", "{495D3639-2F00-4516-AFC7-8ABE1C684714}"
-	ProjectSection(SolutionItems) = preProject
-		Nuget\NuGet.exe = Nuget\NuGet.exe
-	EndProjectSection
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nuget", "Nuget", "{42A85017-2001-4054-9B57-1343E2464380}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,10 +28,6 @@ Global
 		{66BE5181-4C39-4F6E-A38A-E450F1334AC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66BE5181-4C39-4F6E-A38A-E450F1334AC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66BE5181-4C39-4F6E-A38A-E450F1334AC2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A35B3732-1509-4576-A86A-AE158BE2399E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A35B3732-1509-4576-A86A-AE158BE2399E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A35B3732-1509-4576-A86A-AE158BE2399E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A35B3732-1509-4576-A86A-AE158BE2399E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

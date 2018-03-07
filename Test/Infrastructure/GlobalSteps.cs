@@ -16,7 +16,7 @@ namespace Test.Infrastructure
     public class GlobalSteps : Steps
     {
         private static readonly Uri BookDepoHomeUrl = new Uri(ConfigurationManager.AppSettings["BookDepoHomeUrl"]);
-        private static readonly Uri TwoDegreesMobileUrl = new Uri(ConfigurationManager.AppSettings["2dMobile"]);
+        private static readonly Uri GetTimelyHomeUrl = new Uri(ConfigurationManager.AppSettings["GetTimely"]);
 
         [AfterTestRun]
         public static void CompleteTest()
@@ -37,7 +37,14 @@ namespace Test.Infrastructure
             //2d - Driver.NavigateTo(TwoDegreesMobileUrl);
         }
 
-        public static void WaitForPageToLoad(string titleOfExpectedPage = "Xero")
+        public static void GoToGetTimelyHome()
+        {
+            Driver.NavigateTo(GetTimelyHomeUrl);
+            WaitForPageToLoad("Timely Salon & Spa Software | Everything you need to run your business");
+            Thread.Sleep(2500);
+        }
+
+        public static void WaitForPageToLoad(string titleOfExpectedPage = "default")
         {
             using (var s = new StopwatchHelper())
             {

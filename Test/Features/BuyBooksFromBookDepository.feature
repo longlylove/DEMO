@@ -1,4 +1,4 @@
-﻿@BookDepo
+﻿@doNotRunThis
 Feature: BuyBooksFromBookDepository
 	As a bookworm
 	I need to get book from book depo

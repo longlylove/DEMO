@@ -17,18 +17,18 @@ namespace Test.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.3.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [Xunit.TraitAttribute("Category", "doNotRunThis")]
-    public partial class BuyBooksFromBookDepositoryFeature : Xunit.IClassFixture<BuyBooksFromBookDepositoryFeature.FixtureData>, System.IDisposable
+    [Xunit.TraitAttribute("Category", "runThis")]
+    public partial class GetTimelyFeature : Xunit.IClassFixture<GetTimelyFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "BuyBooksFromBookDepository.feature"
+#line 1 "GetTimely.feature"
 #line hidden
         
-        public BuyBooksFromBookDepositoryFeature(BuyBooksFromBookDepositoryFeature.FixtureData fixtureData, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public GetTimelyFeature(GetTimelyFeature.FixtureData fixtureData, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -37,8 +37,8 @@ namespace Test.Features
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "BuyBooksFromBookDepository", "\tAs a bookworm\r\n\tI need to get book from book depo", ProgrammingLanguage.CSharp, new string[] {
-                        "doNotRunThis"});
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "GetTimely", "\t> sign up\r\n\t> login", ProgrammingLanguage.CSharp, new string[] {
+                        "runThis"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -72,7 +72,7 @@ namespace Test.Features
         {
 #line 6
 #line 7
- testRunner.Given("I am on the bookdepository homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I am on GetTimely homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
         }
         
@@ -81,46 +81,46 @@ namespace Test.Features
             this.ScenarioTearDown();
         }
         
-        [Xunit.FactAttribute(DisplayName="Search book by title")]
-        [Xunit.TraitAttribute("FeatureTitle", "BuyBooksFromBookDepository")]
-        [Xunit.TraitAttribute("Description", "Search book by title")]
-        public virtual void SearchBookByTitle()
+        [Xunit.FactAttribute(DisplayName="Signing Up")]
+        [Xunit.TraitAttribute("FeatureTitle", "GetTimely")]
+        [Xunit.TraitAttribute("Description", "Signing Up")]
+        public virtual void SigningUp()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search book by title", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Signing Up", ((string[])(null)));
 #line 9
 this.ScenarioSetup(scenarioInfo);
 #line 6
 this.FeatureBackground();
 #line 10
- testRunner.Given("the search bar is available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I fill in an email address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 11
- testRunner.When("I enter the book title and search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I press the \'Try Timely Free\' button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 12
-  testRunner.Then("the book is displayed as search result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the sign up page is displayed showing \'Start your free 14-day trial\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Add book to basket")]
-        [Xunit.TraitAttribute("FeatureTitle", "BuyBooksFromBookDepository")]
-        [Xunit.TraitAttribute("Description", "Add book to basket")]
-        public virtual void AddBookToBasket()
+        [Xunit.FactAttribute(DisplayName="Log in")]
+        [Xunit.TraitAttribute("FeatureTitle", "GetTimely")]
+        [Xunit.TraitAttribute("Description", "Log in")]
+        public virtual void LogIn()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add book to basket", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Log in", ((string[])(null)));
 #line 14
 this.ScenarioSetup(scenarioInfo);
 #line 6
 this.FeatureBackground();
 #line 15
- testRunner.Given("I added a book to my basket", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I click on the Login link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 16
-  testRunner.Then("I can see the item-added notfication", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("the the login page is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 17
- testRunner.When("I choose to go to checkout", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I fill in the login credentials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 18
-  testRunner.Then("I can see my basket", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("I press \'Log In\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 19
-  testRunner.And("I can see the added item, its price and the total", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("my calendar page is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -132,12 +132,12 @@ this.FeatureBackground();
             
             public FixtureData()
             {
-                BuyBooksFromBookDepositoryFeature.FeatureSetup();
+                GetTimelyFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                BuyBooksFromBookDepositoryFeature.FeatureTearDown();
+                GetTimelyFeature.FeatureTearDown();
             }
         }
     }

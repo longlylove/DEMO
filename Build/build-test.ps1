@@ -1,6 +1,7 @@
-$msbuild = "C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe"
+$msbuild = "C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe"
+$nugetPackages = "../packages"
 $nuget = "../Nuget/NuGet.exe"
-$xunit = "../packages/xunit.runner.console.2.1.0/tools/xunit.console.exe"
+$xunit = "../packages/xunit.runner.console.2.3.1/tools/net452/xunit.console.exe"
 $withTrait = "-trait Category=runThis" #Add required trait for specific tests to run
 $withNoTrait = "-notrait Category=doNotRunThis" #Add required trait for specific tests NOT to run
 $maxNumberParallelThreads = "-maxthreads 1" #Change thread-number (ie.2) to specify number of parallel threads to run
@@ -13,9 +14,9 @@ $warning = "/p:WarningLevel=1"
 #3:lv2 + less than lv2 (ie. expression always true|false)
 #4:default - show everything
 
-$uiTestPath = "../Cin7Test"
-$uiTestCsProjPath = @($uiTestPath,"/Cin7Test.csproj") -join ''
-$uiTestDll = @($uiTestPath,"/bin/Debug/Cin7Test.dll") -join ''
+$uiTestPath = "../Test"
+$uiTestCsProjPath = @($uiTestPath,"/Test.csproj") -join ''
+$uiTestDll = @($uiTestPath,"/bin/Debug/Test.dll") -join ''
 
 if (!(Test-Path -Path $uiTestPath))
 {
@@ -27,7 +28,7 @@ else
 	Write-Host "----------------------------------------"
 	Write-Host "Restoring nuget packages"
 	Write-Host "----------------------------------------"
-	& $nuget restore $uiTestCsProjPath 
+	& $nuget restore $uiTestCsProjPath -PackagesDirectory $nugetPackages
 
 	#Cleaning any old test data
 	Remove-Item -path ..\Cin7Test\TestResults\TestReport-* -Recurse
@@ -36,7 +37,7 @@ else
 	Write-Host "Building" $uiTestPath
 	Write-Host "----------------------------------------"
 	 
-	& $msbuild $uiTestCsProjPath /t:clean,build $warning $buildConfig
+	& $msbuild $uiTestCsProjPath /target:clean,build $warning $buildConfig
 
 	$date = (Get-Date -Format "dd-MMM-yyyy-hh-mm-ss-tt").ToString()
 	$uiTestReportPath = @($uiTestPath,"/TestResults/","TestReport-",$date) -join ''	

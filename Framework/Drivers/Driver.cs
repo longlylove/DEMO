@@ -29,7 +29,7 @@ namespace Framework.Drivers
 
         public static void WaitFor(TimeSpan seconds)
         {
-            DriverInstance.Manage().Timeouts().ImplicitlyWait(seconds);
+            DriverInstance.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
         }
 
         public static IWebDriver NavigateTo(Uri uri)
