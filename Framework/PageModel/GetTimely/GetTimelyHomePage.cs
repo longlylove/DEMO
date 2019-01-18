@@ -21,7 +21,7 @@ namespace Framework.PageModel.GetTimely
         private IWebElement _topEmailSignUp;
 
         [Name("Signup button")]
-        [FindsBy(How = How.XPath, Using = "//input[@id='homepage-top-submit'][@value='Try Timely free']")]
+        [FindsBy(How = How.XPath, Using = "//*[@id='nav-get-started'][contains(text(),'Free')][contains(text(),'Trial')]")]
         private IWebElement _signUpButton;
 
         [Name("Login Link")]

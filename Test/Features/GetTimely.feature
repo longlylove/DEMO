@@ -7,9 +7,9 @@ Background:
 	Given I am on GetTimely homepage
 
 Scenario: Signing Up
-	Given I fill in an email address
-	When I press the 'Try Timely Free' button
-	Then the sign up page is displayed showing 'Start your free 14-day trial'
+	#Given I fill in an email address
+	When I press the 'Free Trial' button
+	Then the sign up page is displayed showing 'Enjoy your free 14-day trial'
 	
 Scenario: Log in
 	Given I click on the Login link

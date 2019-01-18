@@ -91,12 +91,10 @@ namespace Test.Features
 this.ScenarioSetup(scenarioInfo);
 #line 6
 this.FeatureBackground();
-#line 10
- testRunner.Given("I fill in an email address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 11
- testRunner.When("I press the \'Try Timely Free\' button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I press the \'Free Trial\' button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 12
- testRunner.Then("the sign up page is displayed showing \'Start your free 14-day trial\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the sign up page is displayed showing \'Enjoy your free 14-day trial\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

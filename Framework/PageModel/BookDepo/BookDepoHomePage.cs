@@ -14,12 +14,11 @@ namespace Framework.PageModel.BookDepo
         private static readonly ElementHelper ElementHelper = new ElementHelper();
 
         [Name("Search Bar")] 
-        [FindsBy(How = How.XPath, Using = "//input[@id='book-search']")] 
+        [FindsBy(How = How.XPath, Using = "//form[@id='book-search-form']//input[@name='searchTerm']")] 
         private IWebElement _searchInput;
 
         [Name("Search Button")]
-        [FindsBy(How = How.XPath, Using = "//form[@id='book-search-form']//button")]
-        //2d - [FindsBy(How = How.XPath, Using = "//*[@id='search-trigger']")] 
+        [FindsBy(How = How.XPath, Using = "//form[@id='book-search-form']//button[@aria-label='Search']")]
         private IWebElement _searchButton;
 
         public BookDepoHomePage()
